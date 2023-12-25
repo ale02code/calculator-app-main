@@ -1,0 +1,16 @@
+:root {
+  /* Theme 1 */
+  --very-dark-desaturated-blue-main: #3a4764;
+  --very-dark-desatutated-blue-toggle: #232c43;
+  --very-dark-desaturated-blue-background: #182034;
+
+  --desaturated-dark-blue-key-background: #637097;
+  --desaturated-dark-blue-key-shadow: rgb(64, 78, 114);
+  --red-background: #d03f2f;
+  --dark-red-key-shadow: #93261a;
+  --light-grayish-orange: #eae3dc;
+  --grayish-orange-key-shadow: #b4a597;
+
+  --very-dark-grayish-blue: #444b5a;
+  --white: #ffffff;
+}
