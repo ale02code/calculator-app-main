@@ -15,35 +15,39 @@
   <title>Calculator app</title>
 </head>
 
-<body>
-  <main>
-    <header>
-      <h2>calc</h2>
-      <div>
+<body class="body">
+  <main class="main-container">
+    <header class="main-container__header">
+      <h2 class="main-container__header__title">calc</h2>
+      <div class="main-container__header__theme-container">
         <label for="">Theme</label>
+        <input type="range" name="" id="" max="2">
       </div>
     </header>
-    <section>
-      <p></p>
+    <section class="main-container__result-section">
+      <p>399,981</p>
     </section>
-    <section>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <button class="normal-button"></button>
-      <div><button></button><button></button></div>
+    <section class="main-container__keys">
+      <button class="normal-button">7</button>
+      <button class="normal-button">8</button>
+      <button class="normal-button">9</button>
+      <button class="normal-button">DEL</button>
+      <button class="normal-button">4</button>
+      <button class="normal-button">5</button>
+      <button class="normal-button">6</button>
+      <button class="normal-button">+</button>
+      <button class="normal-button">1</button>
+      <button class="normal-button">2</button>
+      <button class="normal-button">3</button>
+      <button class="normal-button">-</button>
+      <button class="normal-button">.</button>
+      <button class="normal-button">0</button>
+      <button class="normal-button">/</button>
+      <button class="normal-button">x</button>
+      <div class="main-container__keys__footer">
+        <button>RESET</button>
+        <button>=</button>
+      </div>
     </section>
   </main>
   <script src="js/main.js"></script>
