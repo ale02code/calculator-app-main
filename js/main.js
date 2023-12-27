@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const result = document.getElementById("result-view");
 const numbers = document.querySelectorAll(".numbers");
@@ -11,9 +11,18 @@ let firstNumber = '';
 let symbol = undefined;
 let secondNumber = '';
 
-const mathOperation = (firstNumber, symbol, secondNumber) => {
-  const operation = eval(firstNumber + symbol + secondNumber);
-  result.innerText = operation;
+const mathOperation = () => {
+  if (firstNumber !== '' && symbol !== undefined && secondNumber !== '') {
+    const operation = maxLength(eval(firstNumber + symbol + secondNumber));
+    firstNumber = operation;
+    return result.innerText = operation;
+  } else {
+    return result.innerText = '0';
+  }
+};
+
+const maxLength = (number) => {
+  return number.slice(0, 8);
 }
 
 remove.addEventListener("click", () => {
@@ -31,10 +40,10 @@ numbers.forEach((number) => number.addEventListener('click', () => {
 
   if (symbol === undefined) {
     firstNumber += valueNumber;
-    result.innerText = firstNumber;
+    result.innerText = maxLength(firstNumber);
   } else {
     secondNumber += valueNumber;
-    result.innerText = secondNumber;
+    result.innerText = maxLength(secondNumber);
   }
 }));
 
@@ -48,15 +57,11 @@ reset.addEventListener("click", () => {
   symbol = undefined;
   secondNumber = '';
   result.innerText = '0';
-})
+});
 
 equal.addEventListener("click", () => {
-  if (firstNumber !== '' || symbol !== undefined || secondNumber !== '') {
-    mathOperation(firstNumber, symbol, secondNumber);
-  } else {
-    result.innerText = "0";
-  }
-  firstNumber = '';
+  mathOperation();
+  firstNumber = result.innerText;
   secondNumber = '';
   symbol = undefined;
 });
