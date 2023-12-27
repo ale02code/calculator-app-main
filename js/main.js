@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 const result = document.getElementById("result-view");
 const numbers = document.querySelectorAll(".numbers");
@@ -13,41 +13,49 @@ let secondNumber = '';
 
 const mathOperation = (firstNumber, symbol, secondNumber) => {
   const operation = eval(firstNumber + symbol + secondNumber);
-  result.textContent = operation;
+  result.innerText = operation;
 }
 
+remove.addEventListener("click", () => {
+  if (symbol === undefined) {
+    firstNumber = firstNumber.slice(0, -1);
+    result.innerText = firstNumber;
+  } else {
+    secondNumber = secondNumber.slice(0, -1);
+    result.innerText = secondNumber;
+  }
+});
+
 numbers.forEach((number) => number.addEventListener('click', () => {
-  const valueNumber = number.textContent;
+  const valueNumber = number.innerText;
 
   if (symbol === undefined) {
     firstNumber += valueNumber;
-    // remove.addEventListener("click", () => {
-    //   const newValor = firstNumber.slice(0, firstNumber.length - 1);
-    //   firstNumber = newValor;
-    //   result.textContent = newValor;
-    // });
-    result.textContent = firstNumber;
+    result.innerText = firstNumber;
   } else {
     secondNumber += valueNumber;
-    result.textContent = secondNumber;
-    remove.addEventListener("click", () => {
-    })
+    result.innerText = secondNumber;
   }
 }));
 
 symbols.forEach((symbolBtn) => symbolBtn.addEventListener('click', () => {
-  symbol = symbolBtn.textContent;
+  const valueSymbol = symbolBtn.innerText;
+  valueSymbol === "x" ? symbol = "*" : symbol = valueSymbol;
 }));
 
 reset.addEventListener("click", () => {
   firstNumber = '';
   symbol = undefined;
   secondNumber = '';
-  result.textContent = '0';
+  result.innerText = '0';
 })
 
 equal.addEventListener("click", () => {
-  mathOperation(firstNumber, symbol, secondNumber);
+  if (firstNumber !== '' || symbol !== undefined || secondNumber !== '') {
+    mathOperation(firstNumber, symbol, secondNumber);
+  } else {
+    result.innerText = "0";
+  }
   firstNumber = '';
   secondNumber = '';
   symbol = undefined;
