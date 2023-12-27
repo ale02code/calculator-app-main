@@ -13,7 +13,7 @@ let secondNumber = '';
 
 const mathOperation = (firstNumber, symbol, secondNumber) => {
   const operation = eval(firstNumber + symbol + secondNumber);
-  return result.textContent = operation;
+  result.textContent = operation;
 }
 
 numbers.forEach((number) => number.addEventListener('click', () => {
@@ -21,10 +21,17 @@ numbers.forEach((number) => number.addEventListener('click', () => {
 
   if (symbol === undefined) {
     firstNumber += valueNumber;
+    // remove.addEventListener("click", () => {
+    //   const newValor = firstNumber.slice(0, firstNumber.length - 1);
+    //   firstNumber = newValor;
+    //   result.textContent = newValor;
+    // });
     result.textContent = firstNumber;
   } else {
     secondNumber += valueNumber;
     result.textContent = secondNumber;
+    remove.addEventListener("click", () => {
+    })
   }
 }));
 
@@ -41,4 +48,7 @@ reset.addEventListener("click", () => {
 
 equal.addEventListener("click", () => {
   mathOperation(firstNumber, symbol, secondNumber);
+  firstNumber = '';
+  secondNumber = '';
+  symbol = undefined;
 });
