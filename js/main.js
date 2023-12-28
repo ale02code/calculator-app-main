@@ -13,7 +13,7 @@ let secondNumber = '';
 
 const mathOperation = () => {
   if (firstNumber !== '' && symbol !== undefined && secondNumber !== '') {
-    const operation = maxLength(eval(firstNumber + symbol + secondNumber));
+    const operation = eval(firstNumber + symbol + secondNumber);
     firstNumber = operation;
     return result.innerText = operation;
   } else {
@@ -40,10 +40,10 @@ numbers.forEach((number) => number.addEventListener('click', () => {
 
   if (symbol === undefined) {
     firstNumber += valueNumber;
-    result.innerText = maxLength(firstNumber);
+    result.innerText = firstNumber;
   } else {
     secondNumber += valueNumber;
-    result.innerText = maxLength(secondNumber);
+    result.innerText = secondNumber;
   }
 }));
 
