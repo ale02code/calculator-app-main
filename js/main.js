@@ -14,6 +14,9 @@ let secondNumber = '';
 const mathOperation = () => {
   if (firstNumber !== '' && symbol !== undefined && secondNumber !== '') {
     const operation = eval(firstNumber + symbol + secondNumber);
+    if (isNaN(operation)) {
+      return result.innerText = 0;
+    }
     firstNumber = operation;
     return result.innerText = operation;
   } else {
@@ -26,12 +29,14 @@ const maxLength = (number) => {
 }
 
 remove.addEventListener("click", () => {
-  if (symbol === undefined) {
-    firstNumber = firstNumber.slice(0, -1);
-    result.innerText = firstNumber;
-  } else {
-    secondNumber = secondNumber.slice(0, -1);
-    result.innerText = secondNumber;
+  if (firstNumber.length !== 1 || secondNumber.length !== 1) {
+    if (symbol === undefined) {
+      firstNumber = firstNumber.slice(0, -1);
+      result.innerText = firstNumber;
+    } else {
+      secondNumber = secondNumber.slice(0, -1);
+      result.innerText = secondNumber;
+    }
   }
 });
 
