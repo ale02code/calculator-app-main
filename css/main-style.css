@@ -367,3 +367,9 @@
   background-color: var(--soft-cyan-key-shadow);
   color: var(--very-light-gray-screen);
 }
+
+@media screen and (min-width: 500px) {
+  .main-container {
+    max-width: 500px;
+  }
+}
