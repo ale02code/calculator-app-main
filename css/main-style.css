@@ -109,28 +109,8 @@
 .main-container__header__theme-container__change-input {
   width: 85px;
   padding-top: 30px;
-}
-
-.main-container__header__theme-container__change-input {
   appearance: none;
   background: transparent;
-}
-
-.main-container__header__theme-container__change-input::-webkit-slider-runnable-track {
-  appearance: none;
-  background-color: var(--very-dark-desatutated-blue-toggle);
-  padding: 5px 5px;
-  border-radius: 30px;
-  cursor: grab;
-}
-
-.main-container__header__theme-container__change-input::-webkit-slider-thumb {
-  appearance: none;
-  background-color: var(--red-background);
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .main-container__result-section {
@@ -223,6 +203,23 @@
   color: var(--white);
 }
 
+.input-theme-1::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--very-dark-desatutated-blue-toggle);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-1::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--red-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .result-1 {
   background-color: var(--very-dark-desaturated-blue-background);
 }
@@ -274,6 +271,23 @@
   color: var(--very-dark-grayish-yellow);
 }
 
+.input-theme-2::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--grayish-toggle-keypad);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-2::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--orange-key-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .result-2 {
   background-color: var(--very-light-gray-screen);
 }
@@ -322,6 +336,23 @@
 .body-3 {
   background-color: var(--very-dark-violet-main-background);
   color: var(--light-yellow);
+}
+
+.input-theme-3::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--very-dark-violet-toggle-keypad);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-3::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--pure-cyan-key-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .result-3 {
