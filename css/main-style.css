@@ -19,7 +19,7 @@
 
   /* Theme 2 */
   --light-gray-main-background: #e6e6e6;
-  --grayish-red-toggle-keypad: #d1cccc;
+  --grayish-toggle-keypad: #d1cccc;
   --very-light-gray-screen: #ededed;
 
   /* keys */
@@ -31,11 +31,11 @@
   --grayish-orange-key-shadow: #a69d91;
 
   /* text */
-  --very-dark-grayish-yellow: #444b5a;
+  --very-dark-grayish-yellow: #35352c;
 
   /* Theme 3 */
-  --very-dark-violet-main-background: rgb(22, 6, 40);
-  --very-dark-violet-toggle-keypad: #413a5c;
+  --very-dark-violet-main-background: #160628;
+  --very-dark-violet-toggle-keypad: #1d0934;
 
   /* keys */
   --dark-violet-key-background: #58077d;
@@ -58,7 +58,6 @@
   width: 100vw;
   overflow-x: hidden;
   position: relative;
-  background-color: var(--desaturated-dark-blue-key-background);
 }
 
 .main-container {
@@ -69,7 +68,6 @@
   width: 90%;
   height: 100%;
   overflow: hidden;
-  color: var(--white);
 }
 
 .main-container__header {
@@ -137,7 +135,6 @@
 
 .main-container__result-section {
   width: 100%;
-  background-color: var(--very-dark-desaturated-blue-background);
   text-align: right;
   padding: 1rem;
   border-radius: 12px;
@@ -150,7 +147,6 @@
 .main-container__keys {
   width: 100%;
   height: 65%;
-  background-color: var(--very-dark-desatutated-blue-toggle);
   padding: 1rem;
   overflow: hidden;
   display: grid;
@@ -222,6 +218,19 @@
 
 /* theme 1 */
 
+.body-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.result-1 {
+  background-color: var(--very-dark-desaturated-blue-background);
+}
+
+.keys-1 {
+  background-color: var(--very-dark-desatutated-blue-toggle);
+}
+
 .theme-1 {
   background-color: var(--grayish-orange-key-shadow);
 }
@@ -259,3 +268,102 @@
 }
 
 /* theme 2 */
+
+.body-2 {
+  background-color: var(--light-gray-main-background);
+  color: var(--very-dark-grayish-yellow);
+}
+
+.result-2 {
+  background-color: var(--very-light-gray-screen);
+}
+
+.keys-2 {
+  background-color: var(--grayish-toggle-keypad);
+}
+
+.theme-2 {
+  background-color: var(--grayish-orange-key-shadow);
+}
+
+.button-normal-theme-2 {
+  background-color: var(--light-grayish-yellow-key-background);
+  color: var(--very-dark-grayish-blue);
+}
+
+.theme-delete-2 {
+  background-color: var(--dark-moderate-cyan-key-shadow);
+}
+
+.delete-2 {
+  background-color: var(--dark-moderate-cyan-key-background);
+  color: var(--white);
+}
+
+.theme-reset-2 {
+  background-color: var(--dark-moderate-cyan-key-shadow);
+}
+
+.reset-2 {
+  background-color: var(--dark-moderate-cyan-key-background);
+  color: var(--white);
+}
+
+.theme-equal-2 {
+  background-color: var(--orange-key-shadow);
+}
+
+.equal-2 {
+  background-color: var(--orange-key-background);
+  color: var(--very-light-gray-screen);
+}
+
+/* theme 3 */
+.body-3 {
+  background-color: var(--very-dark-violet-main-background);
+  color: var(--light-yellow);
+}
+
+.result-3 {
+  background-color: var(--very-dark-violet-toggle-keypad);
+}
+
+.keys-3 {
+  background-color: var(--very-dark-violet-toggle-keypad);
+}
+
+.theme-3 {
+  background-color: var(--dark-violet-key-background);
+}
+
+.button-normal-theme-3 {
+  background-color: var(--very-dark-violet-key-background);
+  color: var(--light-yellow);
+}
+
+.theme-delete-3 {
+  background-color: var(--vivid-magenta-key-shadow);
+}
+
+.delete-3 {
+  background-color: var(--dark-violet-key-background);
+  color: var(--white);
+}
+
+.theme-reset-3 {
+  background-color: var(--vivid-magenta-key-shadow);
+}
+
+.reset-3 {
+  background-color: var(--dark-violet-key-background);
+  color: var(--white);
+}
+
+.theme-equal-3 {
+  background-color: var(--pure-cyan-key-background);
+}
+
+.equal-3 {
+  background-color: var(--soft-cyan-key-shadow);
+  color: var(--very-light-gray-screen);
+}
