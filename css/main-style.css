@@ -1,9 +1,12 @@
 :root {
+  --white: #ffffff;
+
   /* Theme 1 */
   --very-dark-desaturated-blue-main: #3a4764;
   --very-dark-desatutated-blue-toggle: #232c43;
   --very-dark-desaturated-blue-background: #182034;
 
+  /* keys */
   --desaturated-dark-blue-key-background: #637097;
   --desaturated-dark-blue-key-shadow: rgb(64, 78, 114);
   --red-background: #d03f2f;
@@ -11,8 +14,40 @@
   --light-grayish-orange: #eae3dc;
   --grayish-orange-key-shadow: #b4a597;
 
+  /* text */
   --very-dark-grayish-blue: #444b5a;
-  --white: #ffffff;
+
+  /* Theme 2 */
+  --light-gray-main-background: #e6e6e6;
+  --grayish-red-toggle-keypad: #d1cccc;
+  --very-light-gray-screen: #ededed;
+
+  /* keys */
+  --dark-moderate-cyan-key-background: #377f86;
+  --dark-moderate-cyan-key-shadow: #1b5f65;
+  --orange-key-background: #ca5502;
+  --orange-key-shadow: #893901;
+  --light-grayish-yellow-key-background: #e5e4e1;
+  --grayish-orange-key-shadow: #a69d91;
+
+  /* text */
+  --very-dark-grayish-yellow: #444b5a;
+
+  /* Theme 3 */
+  --very-dark-violet-main-background: rgb(22, 6, 40);
+  --very-dark-violet-toggle-keypad: #413a5c;
+
+  /* keys */
+  --dark-violet-key-background: #58077d;
+  --vivid-magenta-key-shadow: #bc15f4;
+  --pure-cyan-key-background: #00e0d1;
+  --soft-cyan-key-shadow: #00b8a9;
+  --very-dark-violet-key-background: #341c4f;
+  --dark-magenta: #871c9c;
+
+  /* text */
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
 }
 
 .body {
@@ -134,7 +169,6 @@
   height: 100%;
   border-radius: 6px;
   font-weight: bolder;
-  background-color: var(--grayish-orange-key-shadow);
   padding-bottom: 5px;
   max-height: 85px;
   max-width: 85px;
@@ -142,27 +176,19 @@
 
 .main-container__keys__button-container-reset {
   grid-column: span 2;
-  background-color: var(--very-dark-desaturated-blue-main);
   max-width: none;
   max-height: none;
 }
 
 .main-container__keys__button-container-equal {
   grid-column: span 2;
-  background-color: var(--dark-red-key-shadow);
   max-width: none;
   max-height: none;
-}
-
-.main-container__keys__button-container-delete {
-  background-color: var(--very-dark-desaturated-blue-main);
 }
 
 .main-container__keys__button-container__normal-button {
   border: none;
   outline: none;
-  background-color: var(--light-grayish-orange);
-  color: var(--very-dark-desaturated-blue-main);
   cursor: pointer;
   text-align: center;
   height: 100%;
@@ -171,8 +197,6 @@
 }
 
 .main-container__keys__button-container__normal-button-delete {
-  background-color: var(--desaturated-dark-blue-key-background);
-  color: var(--white);
   font-size: 25px;
   cursor: pointer;
 }
@@ -183,8 +207,6 @@
   width: 100%;
   height: 100%;
   border-radius: 6px;
-  background-color: var(--desaturated-dark-blue-key-background);
-  color: var(--white);
   font-size: 25px;
   cursor: pointer;
 }
@@ -195,7 +217,45 @@
   width: 100%;
   height: 100%;
   border-radius: 6px;
-  background-color: var(--red-background);
-  color: var(--white);
   cursor: pointer;
 }
+
+/* theme 1 */
+
+.theme-1 {
+  background-color: var(--grayish-orange-key-shadow);
+}
+
+.button-normal-theme-1 {
+  background-color: var(--light-grayish-orange);
+  color: var(--very-dark-desaturated-blue-main);
+}
+
+.theme-delete-1 {
+  background-color: var(--very-dark-desaturated-blue-main);
+}
+
+.delete-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.theme-reset-1 {
+  background-color: var(--very-dark-desaturated-blue-main);
+}
+
+.reset-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.theme-equal-1 {
+  background-color: var(--dark-red-key-shadow);
+}
+
+.equal-1 {
+  background-color: var(--red-background);
+  color: var(--white);
+}
+
+/* theme 2 */
